@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+:root {
+  --neon-cyan: #00f6ff;
+  --neon-magenta: #ff2bd0;
+  --off-red: #5a1b1b;
+  --on-red: #ff3b3b;
+  --tube-base: 0.85;
+  --tube-max: 1.8;
+  --g1: 6px;
+  --g2: 16px;
+  --g3: 34px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #050507;
+  font-family: 'Orbitron', sans-serif;
+  overflow: hidden;
+}
+
+.scene {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.sign,
+.station .letter {
+  text-shadow:
+    0 0 var(--g1) var(--neon-cyan),
+    0 0 var(--g2) var(--neon-cyan),
+    0 0 var(--g3) var(--neon-magenta);
+}
+
+.sign {
+  text-align: center;
+  color: var(--neon-cyan);
+  animation: flicker 8s infinite, powerDip 45s infinite;
+}
+
+.station {
+  font-size: 5.2rem;
+  letter-spacing: 0.55rem;
+  color: var(--neon-magenta);
+}
+
+.station .letter {
+  display: inline-block;
+  --power: var(--tube-base);
+  filter: brightness(var(--power));
+  transition: filter 0.35s ease, text-shadow 0.35s ease;
+}
+
+.station .letter.lit {
+  --g1: 10px;
+  --g2: 22px;
+  --g3: 48px;
+}
+
+.sign.decaying .station .letter {
+  --power: var(--tube-base);
+}
+
+.domain {
+  font-size: 2.1rem;
+  margin-top: 0.4rem;
+}
+
+.status {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+.tagline {
+  font-size: 0.75rem;
+  margin-top: 1.2rem;
+  letter-spacing: 0.3rem;
+  color: #777;
+}
+
+.indicator {
+  --ind-color: var(--off-red);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.25rem;
+  color: #633;
+  margin-bottom: 1.6rem;
+}
+
+.indicator .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--ind-color);
+  animation: offMorse 7s infinite;
+}
+
+.sign.on-air {
+  animation: none;
+  --g1: 10px;
+  --g2: 25px;
+  --g3: 60px;
+}
+
+.sign.on-air .indicator {
+  --ind-color: var(--on-red);
+  color: var(--on-red);
+}
+
+.sign.on-air .indicator .dot {
+  box-shadow: 0 0 10px var(--on-red);
+  animation: none;
+}
+
+.crt {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.02),
+      rgba(255,255,255,0.02) 1px,
+      transparent 2px,
+      transparent 4px
+    );
+}
+
+.fog {
+  position: fixed;
+  inset: -20%;
+  z-index: 1;
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255,255,255,0.035),
+      transparent 60%
+    );
+  animation: drift 35s linear infinite;
+}
+
+@keyframes offMorse {
+  0%, 100% { opacity: 0.3; }
+  10% { opacity: 0.5; }
+  15% { opacity: 0.25; }
+  30% { opacity: 0.45; }
+  60% { opacity: 0.2; }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  2% { opacity: 0.9; }
+  7% { opacity: 0.75; }
+}
+
+@keyframes powerDip {
+  0%, 96%, 100% { filter: brightness(1); }
+  97% { filter: brightness(0.2); }
+  98% { filter: brightness(1); }
+}
+
+@keyframes drift {
+  from { transform: translateX(-12%); }
+  to { transform: translateX(12%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+  }
+}
