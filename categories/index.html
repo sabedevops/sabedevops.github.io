@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>sabedevops</title>
+  <title>categories · sabedevops</title>
   <meta name="description" content="notes from the command line">
   <link href="https://sabedevops.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="sabedevops full atom feed">
   <link rel="icon" href="https://sabedevops.net/favicon.ico">
@@ -34,7 +34,7 @@
         <span class="light green"></span>
       </div>
       <div class="titlebar-title">
-        sabedevops@dev: ~      </div>
+        sabedevops@dev: ~/categories      </div>
       <button class="mode-toggle" id="mode-toggle" type="button"
               aria-label="Toggle terminal / paper reading mode" title="Toggle terminal / paper (` backtick)">
         <span class="mode-toggle-term">◐ term</span>
@@ -49,68 +49,22 @@
       </a>
 <p class="subtitle"># notes from the command line</p>
       <nav class="site-nav" aria-label="Main navigation">
-        <a href="https://sabedevops.net/" class="nav-link active">cd ~</a>
+        <a href="https://sabedevops.net/" class="nav-link">cd ~</a>
         <a href="https://sabedevops.net/archives/" class="nav-link">ls posts/</a>
           <a href="https://sabedevops.net/about/" class="nav-link">cat about</a>
       </nav>
     </header>
 
     <main class="content" id="content">
-<section class="hero-terminal" aria-label="Interactive terminal">
-  <div class="repl" id="repl">
-    <div class="repl-output" id="repl-output"></div>
-    <div class="repl-inputline">
-      <span class="repl-prompt">sabedevops@dev:~$</span>
-      <span class="repl-input" id="repl-input" tabindex="0" role="textbox"
-            aria-label="Terminal input, type help"></span><span class="repl-caret" id="repl-caret">█</span>
-    </div>
-  </div>
-  <p class="repl-hint">interactive shell — type <code>help</code> and press <kbd>enter</kbd> · click to focus</p>
-</section>
-
-<script id="post-index" type="application/json">
-{
-  "site": "sabedevops",
-  "user": "sabedevops",
-  "host": "dev",
-  "author": "Steven Broderick Elias",
-  "siteurl": "https://sabedevops.net",
-  "social": [
-{"name": "LinkedIn", "url": "https://www.linkedin.com/in/sabedevops/"},{"name": "GitHub", "url": "https://github.com/sabedevops"}  ],
-  "pages": [
-{"slug": "about", "title": "About", "url": "https://sabedevops.net/about/"}  ],
-  "posts": [
-{
-      "slug": "hello-world",
-      "title": "Hello, world \u2014 the site gets a new prompt",
-      "url": "https://sabedevops.net/posts/hello-world/",
-      "date": "2026-07-06",
-      "category": "meta",
-      "summary": "A developer blog with a terminal you can actually type into \u2014 and a bell hidden in the margins."
-    }  ]
-}
-</script>
-
-<section class="post-list" aria-label="Recent posts">
-  <h2 class="section-heading"><span class="sh-prompt">$</span> ls -lt ~/posts</h2>
-
-  <ol class="posts">
-    <li class="post-item">
-      <div class="post-meta">
-        <time datetime="2026-07-06T09:00:00-05:00" class="post-date">2026-07-06</time>
-        <a class="post-cat" href="https://sabedevops.net/category/meta/">[meta]</a>
-      </div>
-      <h3 class="post-title">
-        <a href="https://sabedevops.net/posts/hello-world/">Hello, world — the site gets a new prompt</a>
-      </h3>
-      <p class="post-summary">A developer blog with a terminal you can actually type into — and a bell hidden in the margins.</p>
-      <a class="post-more" href="https://sabedevops.net/posts/hello-world/">cat hello-world.md →</a>
+<section class="listing" aria-label="Categories">
+  <h1 class="section-heading"><span class="sh-prompt">$</span> ls ~/posts | cut -d/ -f1 | sort -u</h1>
+  <ul class="tax-list">
+    <li>
+      <a class="tax-name" href="https://sabedevops.net/category/meta/">meta</a>
+      <span class="tax-count dim">1 post</span>
     </li>
-  </ol>
-
-
+  </ul>
 </section>
-
     </main>
 
     <footer class="site-foot">
@@ -143,6 +97,5 @@
   </div>
 
   <script src="https://sabedevops.net/theme/js/typewriter.js" defer></script>
-<script src="https://sabedevops.net/theme/js/terminal.js" defer></script>
 </body>
 </html>

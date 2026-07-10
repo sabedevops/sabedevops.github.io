@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>sabedevops</title>
-  <meta name="description" content="notes from the command line">
+  <title>Hello, world — the site gets a new prompt · sabedevops</title>
+  <meta name="description" content="A developer blog with a terminal you can actually type into — and a bell hidden in the margins.">
   <link href="https://sabedevops.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="sabedevops full atom feed">
   <link rel="icon" href="https://sabedevops.net/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +34,7 @@
         <span class="light green"></span>
       </div>
       <div class="titlebar-title">
-        sabedevops@dev: ~      </div>
+        sabedevops@dev: ~/posts/hello-world      </div>
       <button class="mode-toggle" id="mode-toggle" type="button"
               aria-label="Toggle terminal / paper reading mode" title="Toggle terminal / paper (` backtick)">
         <span class="mode-toggle-term">◐ term</span>
@@ -49,68 +49,73 @@
       </a>
 <p class="subtitle"># notes from the command line</p>
       <nav class="site-nav" aria-label="Main navigation">
-        <a href="https://sabedevops.net/" class="nav-link active">cd ~</a>
+        <a href="https://sabedevops.net/" class="nav-link">cd ~</a>
         <a href="https://sabedevops.net/archives/" class="nav-link">ls posts/</a>
           <a href="https://sabedevops.net/about/" class="nav-link">cat about</a>
       </nav>
     </header>
 
     <main class="content" id="content">
-<section class="hero-terminal" aria-label="Interactive terminal">
-  <div class="repl" id="repl">
-    <div class="repl-output" id="repl-output"></div>
-    <div class="repl-inputline">
-      <span class="repl-prompt">sabedevops@dev:~$</span>
-      <span class="repl-input" id="repl-input" tabindex="0" role="textbox"
-            aria-label="Terminal input, type help"></span><span class="repl-caret" id="repl-caret">█</span>
-    </div>
+<article class="article" aria-label="Article">
+  <div class="article-crumb">
+    <a href="https://sabedevops.net/">~</a><span class="sep">/</span><a href="https://sabedevops.net/archives/">posts</a><span class="sep">/</span><span class="crumb-current">hello-world.md</span>
   </div>
-  <p class="repl-hint">interactive shell — type <code>help</code> and press <kbd>enter</kbd> · click to focus</p>
-</section>
 
-<script id="post-index" type="application/json">
-{
-  "site": "sabedevops",
-  "user": "sabedevops",
-  "host": "dev",
-  "author": "Steven Broderick Elias",
-  "siteurl": "https://sabedevops.net",
-  "social": [
-{"name": "LinkedIn", "url": "https://www.linkedin.com/in/sabedevops/"},{"name": "GitHub", "url": "https://github.com/sabedevops"}  ],
-  "pages": [
-{"slug": "about", "title": "About", "url": "https://sabedevops.net/about/"}  ],
-  "posts": [
-{
-      "slug": "hello-world",
-      "title": "Hello, world \u2014 the site gets a new prompt",
-      "url": "https://sabedevops.net/posts/hello-world/",
-      "date": "2026-07-06",
-      "category": "meta",
-      "summary": "A developer blog with a terminal you can actually type into \u2014 and a bell hidden in the margins."
-    }  ]
-}
-</script>
+  <header class="article-head">
+    <h1 class="article-title">Hello, world — the site gets a new prompt</h1>
+    <div class="article-meta">
+      <time datetime="2026-07-06T09:00:00-05:00">July 6, 2026</time>
+      <span class="meta-sep">·</span>
+      <a href="https://sabedevops.net/category/meta/" class="meta-cat">meta</a>
+      <span class="meta-sep">·</span>
+      <span class="meta-author">Steven Broderick Elias</span>
+      <span class="meta-sep">·</span>
+      <span class="meta-mod">edited 2026-07-07</span>
+    </div>
+  </header>
 
-<section class="post-list" aria-label="Recent posts">
-  <h2 class="section-heading"><span class="sh-prompt">$</span> ls -lt ~/posts</h2>
+  <div class="article-body prose">
+    <p>Welcome. This is where I write about building and running software — mostly
+Linux, ops, and automation, with the occasional detour into keyboards.</p>
+<h2>The theme</h2>
+<p>The site is built around the tools I actually spend my day with — a terminal, a
+mechanical keyboard, and (in spirit) a teletype and a typewriter.</p>
+<ul>
+<li><strong>Amber phosphor by default.</strong> Warm on the eyes, easy to read at night.</li>
+<li><strong>A paper reading mode.</strong> Hit <code>`</code> (backtick) anywhere — or the toggle up
+  top — and posts render as ink on cream in a Courier face, like a fresh page
+  off the platen.</li>
+<li><strong>A terminal you can use.</strong> The homepage isn't a <em>picture</em> of a prompt; it's a
+  small shell. Try <code>help</code>, <code>ls</code>, <code>cat hello-world</code>, or <code>neofetch</code>.</li>
+</ul>
+<h2>A note for typists</h2>
+<p>There's a bell hidden in this site. Start typing a long line anywhere — not in
+the terminal, just on the page — and keep going. Somewhere around column 68
+you'll hear it ring.</p>
+<p>If you've ever used a real typewriter, you already know what the bell means and
+what to do next. If you do the right thing, you'll find a little something left
+on the page for you.</p>
+<h2>What's next</h2>
+<p>Posts, mostly: notes on Linux, ops, automation, and the occasional yak-shave
+about keyboards. Grab the feed, or just check back.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/posts<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ls<span class="w"> </span>-lt
+</code></pre></div>
+  </div>
 
-  <ol class="posts">
-    <li class="post-item">
-      <div class="post-meta">
-        <time datetime="2026-07-06T09:00:00-05:00" class="post-date">2026-07-06</time>
-        <a class="post-cat" href="https://sabedevops.net/category/meta/">[meta]</a>
-      </div>
-      <h3 class="post-title">
-        <a href="https://sabedevops.net/posts/hello-world/">Hello, world — the site gets a new prompt</a>
-      </h3>
-      <p class="post-summary">A developer blog with a terminal you can actually type into — and a bell hidden in the margins.</p>
-      <a class="post-more" href="https://sabedevops.net/posts/hello-world/">cat hello-world.md →</a>
-    </li>
-  </ol>
+  <footer class="article-foot">
+    <div class="tag-row">
+      <span class="tag-label"># tags:</span>
+      <a href="https://sabedevops.net/tag/meta/" class="tag">meta</a>
+      <a href="https://sabedevops.net/tag/terminal/" class="tag">terminal</a>
+      <a href="https://sabedevops.net/tag/typewriters/" class="tag">typewriters</a>
+    </div>
 
+    <nav class="article-nav" aria-label="Post navigation">
+<span></span><span></span>    </nav>
 
-</section>
-
+    <a class="back-link" href="https://sabedevops.net/archives/">cd ~/posts</a>
+  </footer>
+</article>
     </main>
 
     <footer class="site-foot">
@@ -143,6 +148,5 @@
   </div>
 
   <script src="https://sabedevops.net/theme/js/typewriter.js" defer></script>
-<script src="https://sabedevops.net/theme/js/terminal.js" defer></script>
 </body>
 </html>
